@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs')%>
+
+<aside>
+  <ul><li><h2>Interested in this laptop?</h2></li>
+  <li><button class="button"><a href="/trades">Trade</a></button></li>
+  <li><button class="button"><a href="/trades">Rate</a></button></li></ul>
+</aside>
+    <div class="content">
+      <img src="<%= trade.image%>" alt="image of laptops">
+        <h3><li>CATEGORY:&nbsp<%= trade.category%></li></h3>
+        <br>
+        <h3><li>TITLE:&nbsp<%= trade.title%></li></h3>
+        <br>
+        <h3><li>MODEL NO:&nbsp<%= trade.modlenumber%></li></h3>
+        <br>
+        <h3><li>SPECIFICATIONS:&nbsp<%= trade.specification%></li></h3>
+        <br>
+        <form>
+            <button type="submit" formmethod="get" formaction="/trades/<%= trade.id%>/edit">Edit</button>
+            <button type="submit" formmethod="post" formaction="/trades/<%= trade.id%>?_method=DELETE">Delete</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ 
+<%- include('../partials/footer.ejs')%>

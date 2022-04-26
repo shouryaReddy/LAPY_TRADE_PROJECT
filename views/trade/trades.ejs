@@ -1,0 +1,36 @@
+<%- include('../partials/header.ejs')%>
+<br>
+<br>
+        <main>
+            <section>                                                  
+                <div class="laptops_content">
+                    <%if(categories.length) {%>                        
+                        <%categories.forEach(category=> {%>
+                            <h3>
+                                <%= category %>
+                            </h3>
+                            <ul>
+                                <% if(trades.length){ %>
+                                    <% trades.forEach(trade=> {
+                                        if (trade.category === category) { %>
+                                        <li class="linksTrades">
+                                            <a href="/trades/<%= trade.id%>">
+                                                <%= trade.title%>
+                                            </a>
+                                        </li>
+                                        &nbsp;
+                                        <% } }); } else { %>
+                                            <p>There are no laptop items to display.</p>
+                                            <% } %>
+                            </ul>
+            
+                            <% }); %>
+                                <% } else { %>
+                                    <p>There are no categories to display.</p>
+                                    <% } %>
+                </div>
+             </section> 
+        </main>
+            
+     
+ <%- include('../partials/footer.ejs')%>

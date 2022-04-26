@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <%if(stories.length){%>
+            <p>Select a laptop to view</p>
+            <%laptops.forEach(lapy=>{%>
+                <a href = "/laptops/<%= lapy.id%>"><p><%=lapy.title%></p></a>
+            <%});
+        } else{%>
+            <p>There are no laptops to display.</p>
+        <%}%>
+    </div>
+    <%- include('../partials/footer.ejs')%>

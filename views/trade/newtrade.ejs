@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs')%>
+<main>
+        <section>
+        <h2>CREATE TRADE</h2>
+
+                 <form class="form-trade" action="/trades" method="POST">
+                 <br>
+
+                    <label for="title" >TITLE</label><br>
+                    <input type="text" id="title" name="title"><br><br>
+
+                    <label for="title" >CATEGORY</label><br>
+                    <input type="text" id="category" name="category"><br><br>
+
+                    <label for="ModelNum">LAPTOP MODEL</label><br>
+                    <input type="text" id="modlenumber" name="modlenumber" placeholder="Lapy id" /><br><br>
+
+                    <label for="Lspec">SPECIFICATIONS</label><br>
+                    <textarea rows="3" cols="50" name="specification" id="specification">enter the description of laptop</textarea><br><br>
+
+                    <label for="LImg">IMAGE URL</label>
+                    <input type="text" id="image" name="image" class="fixed-width" /><br><br>
+
+                    <button>Submit</button> 
+                  </form>                       
+          </section> 
+</main>
+       
+ <%- include('../partials/footer.ejs')%>
+
+     

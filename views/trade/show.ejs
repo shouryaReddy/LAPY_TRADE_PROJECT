@@ -1,0 +1,11 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <h4><%=lapy.title%></h4>
+        <small>Posted <%= lapy.createdAt%> by <%= lapy.author%></small>
+        <div id = "lapy"><%= lapy.specification%></div>
+        <form>
+            <button type = "submit" formmethod="GET" formaction="/laptops/<%= lapy.id%>/edit">Edit</button>
+            <button type = "submit" formmethod="POST" formaction="/laptops/<%= lapy.id%>?_method=DELETE">Delete</button>
+        </form>
+    </div>
+    <%- include('../partials/footer.ejs')%>

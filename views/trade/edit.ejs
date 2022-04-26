@@ -1,0 +1,27 @@
+    <%- include('../partials/header.ejs')%>
+    <main>
+        <section>
+        <h2>EDIT TRADE</h2>
+
+                 <form method="POST" action="/trades/<%= trade.id%>?_method=PUT">
+
+                    <label for="title" >TITLE</label><br>
+                    <input type="text" id="title" name="title" value = "<%= trade.title%>" /><br><br>
+
+                    <label for="Lspec">SPECIFICATIONS</label><br>
+                    <textarea rows="3" cols="50" name="specification" id="specification"> <%= trade.specification%></textarea><br><br>
+
+                    <label for="modlenumber">Laptop MODELNO</label><br>
+                    <input type="text" id="modlenumber"name= "modlenumber" placeholder="Lapy ModelNo" value = "<%= trade.modlenumber%>"  /><br><br>
+                    
+                    <label for="title" >CATEGORY</label><br>
+                    <input type="text" id="category" name="category" value = "<%= trade.category%>" /><br><br>
+         
+
+                   
+
+                    <button>Submit</button> 
+                  </form>                       
+          </section> 
+</main>
+<%- include('../partials/footer.ejs')%>
